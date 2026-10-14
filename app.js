@@ -61,11 +61,11 @@ reservationForm?.addEventListener('submit', (event) => {
   const date = String(values.get('date'));
   const time = String(values.get('time'));
   const people = String(values.get('people'));
-  const message = `Hola, soy ${name}. Quisiera solicitar una reserva para ${people} el ${date} a las ${time}. ¿Me confirman disponibilidad?`;
-  const whatsappUrl = `https://wa.me/573046030320?text=${encodeURIComponent(message)}`;
+  const message = `Hola, soy ${name}. Quisiera solicitar una reserva para ${people} el ${date} a las ${time} en Asados de la 70. ¿Me confirman disponibilidad?`;
+  const whatsappUrl = `https://wa.me/573244762176?text=${encodeURIComponent(message)}`;
   const opened = window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
 
   status.textContent = opened
     ? 'Se abrió WhatsApp con tu solicitud. Envíala allí y espera la confirmación del restaurante.'
-    : 'Tu navegador bloqueó la nueva pestaña. Usa el enlace de WhatsApp de la página para continuar.';
+    : 'Tu navegador bloqueó la nueva pestaña. Usa el botón de WhatsApp para continuar.';
 });
